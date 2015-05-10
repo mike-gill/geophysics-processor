@@ -38,13 +38,15 @@ class SnufflerXYZPlotter():
         xyz = XYZImporter(filename)
         geodata = xyz.genericdata
         print "FINISHED reading XYZ data file"
-        
+
+        # Note PNG is only 8 bit, and so PDF has greater colour
+        # depth        
         print "\nAbout to render plot ..."
         gp = GridPlotter()
         gp.shownulls = False
         title = "Plot of XYZ data file: " + filename
         outfname = (filename.replace('.', '_') +
-                    '_PLOT.png')
+                    '_PLOT.pdf')
         gp.plotgeodata(geodata, title, outfname)
         print "FINISHED rendering plot to:\n" + outfname
         print "\n\n"
