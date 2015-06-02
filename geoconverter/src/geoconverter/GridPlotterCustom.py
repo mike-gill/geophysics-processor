@@ -2,7 +2,7 @@ from pylab import *
 import matplotlib as mpl
 import numpy as np
 
-class GridPlotter:
+class GridPlotterCustom:
     """
     Controls the production of a plot image from
     a geodata class.  The plot image contains
@@ -82,6 +82,7 @@ class GridPlotter:
         mpl.rc('ytick', labelsize=8)
         mpl.rc('savefig', dpi=300)
 
+        #fig = plt.figure(figsize=(30,10))
         fig = plt.figure(figsize=(10,10))
         plt.title(title)
 

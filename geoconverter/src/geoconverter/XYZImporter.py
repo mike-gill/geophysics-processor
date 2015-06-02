@@ -27,7 +27,7 @@ class XYZImporter():
         Private method to read the raw text file into a
         two dimensional array
         """        
-        reader = csv.reader(open(self.filename), delimiter=' ')
+        reader = csv.reader(open(self.filename), delimiter=',')
         self.data = []
 
         maxx = 0
@@ -40,7 +40,7 @@ class XYZImporter():
         # Initialize array
         self.data = [[0 for col in range(maxy + 1)] for row in range(maxx + 1)]
 
-        reader = csv.reader(open(self.filename), delimiter=' ')
+        reader = csv.reader(open(self.filename), delimiter=',')
         
         for row in reader:
             c = int(row[0])
