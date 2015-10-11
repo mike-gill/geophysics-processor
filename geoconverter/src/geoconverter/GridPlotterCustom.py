@@ -157,6 +157,7 @@ class GridPlotterCustom:
             [[r,c],[r,c]]
         """
         ax = plt.subplot(plotref)
+		ax.axis('off')
         imgplot = plt.imshow(arr, origin='lower',
                              interpolation=interp, cmap=colmap)
         if len(col_lim) != 0:
