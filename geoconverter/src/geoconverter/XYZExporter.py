@@ -32,7 +32,7 @@ class XYZExporter():
                 if val == geodata.NULLVALUE:
                     val = nullvalue
                 # Rotate 90 degrees to left while exporting
-                f.write(str(r) + self.sep + str(len(data[c]) - c) + self.sep + str(val))
+                f.write(str(r) + self.sep + str(len(data[r]) - c - 1) + self.sep + str(val))
                 f.write('\n')
         f.close()
         

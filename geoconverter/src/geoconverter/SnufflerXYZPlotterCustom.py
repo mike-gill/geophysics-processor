@@ -5,7 +5,7 @@ from MagnetData import *
 from TextFileExporter import *
 from XYZExporter import *
 from XYZImporter import *
-from GridPlotter import *
+from GridPlotterCustom import *
 
 class SnufflerXYZPlotter():
     """
@@ -42,11 +42,11 @@ class SnufflerXYZPlotter():
         # Note PNG is only 8 bit, and so PDF has greater colour
         # depth        
         print "\nAbout to render plot ..."
-        gp = GridPlotter()
+        gp = GridPlotterCustom()
         gp.shownulls = False
         title = "Plot of XYZ data file: " + filename
         outfname = (filename.replace('.', '_') +
-                    '_PLOT.pdf')
+                    '_PLOT_custom.pdf')
         gp.plotgeodata(geodata, title, outfname)
         print "FINISHED rendering plot to:\n" + outfname
         print "\n\n"
